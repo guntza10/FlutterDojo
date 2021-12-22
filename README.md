@@ -42,9 +42,20 @@
 
 ![stateless_widget](images/stateless_widget.png)
 
+`Note : ` stateless จะมีการ build render เพียงแค่ครั้งเดียว
+
 2. `Stateful` -> เป็น widget ที่มีหลาย state เช่น ตอนโหลดข้อมูลจะมีตัว loading spin แล้วพอข้อมูลโหลดเสร็จก็จะแสดง list รายการข้อมูล, checkbox, slider, text input field เป็นต้น
 
 ![stateful_widget](images/stateful_widget.png)
 
+`Note : ` stateful จะสามารถ build render ได้หลายครั้ง โดยผ่านคำสั่ง `setState(() {})`  ที่จะเป็นการบอกกับ app ว่าตัวแปรใน widget นี้มีการเปลี่ยนแปลง
+
 
 `Note :` stateless,stateful มี method build สำหรับ render ui
+
+### Center
+-> เป็น widget ที่เอาไว้จัดการ widget ตัวอื่นให้อยู่ตรงกลางทั้งแนวนอน แนวตั้ง (ซึ่งจะรับ widget ได้แค่ตัวเดียว)
+
+### Column
+-> เป็น widget ที่เอาจัดการ layout ให้ widget เรียงลงมาตามแนวตั้ง (ซึ่งจะรับ widget ได้มากกว่า 1)
+-> มี property mainAxisAlignment,crossAxisAlignment ในการจัดตำแหน่ง layout ตามแนว
