@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'contact.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -51,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var contactList = [
-      Contact('Jomphop Saibuatong', '0845167512'),
-      Contact('Kant Saibuatong', '0845167513'),
+      Contact('Jomphop Saibuatong', '0845167512', 'assets/images/nextflow.png'),
+      Contact('Kant Saibuatong', '0845151177', 'assets/images/error.png'),
     ];
 
     return Scaffold(
@@ -71,9 +73,13 @@ class _MyHomePageState extends State<MyHomePage> {
           var contact = contactList[index];
 
           return ListTile(
-            leading: Text('$index'),
+            leading: Image.asset(contact.imageSrc),
             title: Text(contact.name),
             subtitle: Text(contact.phoneNumber),
+            onTap: () {
+              // do something for tap each ListTile in ListView
+              launch('tel:${contact.phoneNumber}');
+            },
           );
         },
       ),

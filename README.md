@@ -1,5 +1,8 @@
 # **FlutterDojo**
 
+## **Trick**
+- `url_launcher` => เป็น plugin ที่ทำให้สามารถโทรออกได้
+
 ## **Commands**
 
 - flutter create `name project` => create project flutter
@@ -70,3 +73,11 @@
 -> เป็น Widget ที่เอาไว้สำหรับจัดเรียงข้อมูล list ที่เรียงจากบนลงล่าง
 -> ListTile เป็นเหมือนก้อน object ข้อมูลสำหรับ render ใน ListView
 -> สามารถ auto generate ListView ได้ด้วยการใช้ ListView.builder
+
+### Image
+
+-> เป็น Widget สำหรับรูปจะมี constructure method อยู่ 4 ตัว
+- `asset()`
+- `network()`
+- `file()`
+- `memory()`
