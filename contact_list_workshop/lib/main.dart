@@ -50,8 +50,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    var contact = Contact('Jomphop Saibuatong', '0845167512');
-    
+    var contactList = [
+      Contact('Jomphop Saibuatong', '0845167512'),
+      Contact('Kant Saibuatong', '0845167513'),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Nextflow Contact"),
@@ -63,9 +66,15 @@ class _MyHomePageState extends State<MyHomePage> {
       //   children: generateListTile(20),
       // ),
       body: ListView.builder(
-        itemCount: 30,
+        itemCount: contactList.length,
         itemBuilder: (BuildContext context, int index) {
-          return ListTile(title: Text('$index'));
+          var contact = contactList[index];
+
+          return ListTile(
+            leading: Text('$index'),
+            title: Text(contact.name),
+            subtitle: Text(contact.phoneNumber),
+          );
         },
       ),
     );
