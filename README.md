@@ -2,6 +2,8 @@
 
 ## **Trick**
 - `url_launcher` => เป็น plugin ที่ทำให้สามารถโทรออกได้
+- `http` => เป็น plugin ที่เอาไว้จัดการ call api
+- https://quicktype.io => เป็นตัวแปลง json data ให้อยู่ในรูป class model ของหลายๆภาษารวมถึง dart 
 
 ## **Commands**
 
@@ -56,6 +58,8 @@
 ![stateful_widget](images/stateful_widget.png)
 
 `Note : ` stateful จะสามารถ build render ได้หลายครั้ง โดยผ่านคำสั่ง `setState(() {})` ที่จะเป็นการบอกกับ app ว่าตัวแปรใน widget นี้มีการเปลี่ยนแปลง
+
+`Note : ` initState() เป็น method ที่ inherit มาจาก State เป็น method ที่จะเอาไว้ init ค่าต่างๆ ก่อนที่จะ build render ui ขึ้นมา
 
 `Note :` stateless,stateful มี method build สำหรับ render ui
 
