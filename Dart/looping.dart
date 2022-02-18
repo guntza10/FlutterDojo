@@ -29,7 +29,9 @@ void main() {
     if (i == 7) {
       break;
     }
+
     print(i);
+    i += 1;
   }
 
   // do while => ทำก่อนแล้วค่อยเข้า check condition while loop ต่างจาก while ตรงที่จะเข้า check condition while loop เลย
